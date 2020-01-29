@@ -18,6 +18,6 @@ repositories {
 
 dependencies {
 
-    compile project(':commun')
+    compile project(':commun_javafx')
 
 }
