@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Button?>
 
-<VBox xmlns:fx="http://javafx.com/fxml">
-	<Text text="Vitesse"/>
-</VBox>
+<HBox xmlns:fx="http://javafx.com/fxml">
+	
+	<VBox styleClass = "langue">
+		<HBox styleClass="textTitre" >
+			<Text styleClass="" text="%langue"/>
+		</HBox>
+		
+		<HBox styleClass="mainParam" VBox.vgrow="ALWAYS">
+			<HBox styleClass="checkBoxLangue">
+				<CheckBox styleClass="checkBoxParametres" text="%francais"/>
+			</HBox>
+			<HBox styleClass="checkBoxLangue" >
+				<CheckBox styleClass="checkBoxParametres" text="%anglais"/>
+			</HBox>
+		</HBox>
+		
+		<HBox styleClass="textTitre">
+			<Text styleClass="" text="%difficulte"/>
+		</HBox>
+		
+		<HBox styleClass="mainParam" VBox.vgrow="ALWAYS">
+			<HBox styleClass="checkBoxDifficulte" >
+				<CheckBox styleClass="checkBoxParametres" text="%facile"/>
+			</HBox>
+			<HBox styleClass="checkBoxDifficulte" >
+				<CheckBox styleClass="checkBoxParametres" text="%intermediaire"/>
+			</HBox>
+			<HBox styleClass="checkBoxDifficulte" >
+				<CheckBox styleClass="checkBoxParametres" text="%difficile"/>
+			</HBox>
+		</HBox>
+		
+		<Text styleClass="" text=""/>
+		
+		<HBox styleClass = "conteneurBouton" VBox.vgrow="ALWAYS">
+			<HBox>
+				<Button styleClass = "boutonAnnuler" text="%annuler" />
+			</HBox>
+			<HBox>
+				<Button styleClass = "boutonConfirmer" text="%confirmer" />
+			</HBox>
+		</HBox>
+	</VBox>	
+</HBox>

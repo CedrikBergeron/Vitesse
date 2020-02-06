@@ -8,6 +8,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 public class Principal extends Application {
 	
 	static {
@@ -39,7 +40,7 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		ChargeurDeVue chargeur = new ChargeurDeVue("/fxml/principal.xml");
+		ChargeurDeVue chargeur = new ChargeurDeVue(Constantes.CHEMIN_PARTIE_LOCALE_FXML,Constantes.CHEMIN_CHAINES,Constantes.CHEMIN_PARTIE_LOCALE_CSS);
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		

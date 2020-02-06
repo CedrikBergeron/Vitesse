@@ -35,7 +35,14 @@ dependencies {
 
 }
 
-task (joueur01, dependsOn: 'classes', type: JavaExec) {
+task(joueur01, dependsOn: 'classes', type: JavaExec) {
    main = 'vitesse.Principal'
    classpath = sourceSets.main.runtimeClasspath
+   jvmArgs('-Duser.language=fr')
+}
+
+task(joueur01En, dependsOn: 'classes', type: JavaExec) {
+   main = 'vitesse.Principal'
+   classpath = sourceSets.main.runtimeClasspath
+   jvmArgs('-Duser.language=en')
 }
