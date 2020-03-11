@@ -2,17 +2,37 @@ package vitesse;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
+import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_javafx.ChargeurDeVue;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import vitesse.afficheurs.AfficheurParametresFX;
+import vitesse.modeles.parametres.Parametres;
+import vitesse_client.afficheurs.AfficheurParametres;
+import vitesse_client.vues.VueParametres;
+import vitesse_controleurs.ControleurParametresFX;
 
 
 public class Principal extends Application {
 	
 	static {
 		J.appel(Principal.class);
+		
+		ChargeurDeVue<VueParametres> chargeur;
+		
+		chargeur = new ChargeurDeVue<VueParametres>("../ressources/fxml/Parametres.xml", "je sais pas", "../ressources/css/style.css");
+		
+		VueParametres vue = chargeur.getVue();
+		
+		DoitEtre.nonNul(vue);
+		
+		Parametres param = new Parametres();
+		
+		AfficheurParametresFX afficheur = new AfficheurParametresFX();
+		
+		FabriqueControleur.creerControleur(ControleurParametresFX.class, param, vue, afficheur);
 		
 		Initialisateur.initialiser();
 		
@@ -47,7 +67,6 @@ public class Principal extends Application {
 		DoitEtre.nonNul(scene);
 		
 		return scene;
-		
 	}
 	
 	@Override
