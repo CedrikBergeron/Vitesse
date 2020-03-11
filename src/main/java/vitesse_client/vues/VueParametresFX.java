@@ -36,4 +36,13 @@ public class VueParametresFX<ConteneurCartes01, ConteneurEntetes>  implements Vu
 		DoitEtre.nonNul(conteneurCartes01);
 	}
 
+	@Override
+	public void creerCartes(int nbCartesJeu) {
+		J.appel(this);
+		
+		conteneurEntetes.creerEntetes();
+		
+		conteneurCartes01.creerCartes();
+	}
+
 }

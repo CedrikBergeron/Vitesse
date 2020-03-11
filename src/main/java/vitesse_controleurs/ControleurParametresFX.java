@@ -9,14 +9,10 @@ public class ControleurParametresFX extends ControleurParametres<VueParametresFX
 
 	@Override
 	protected void installerReceptionCommandes() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
-	@Override
-	protected void demarrer() {
-		J.appel(this);
-		
-	}
+	
 
 }
