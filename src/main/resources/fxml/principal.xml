@@ -6,10 +6,14 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Button?>
 
-<HBox xmlns:fx="http://javafx.com/fxml">
+<?import vitesse.vues.composants.showPicture?>
+<?import vitesse.vues.composants.adjustPicture?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" >
 	
 	<VBox styleClass = "langue">
 		<HBox styleClass="textTitre" >
+		<showPicture styleClass ="image01" url="/images/options_cartes.jpg" HBox.hgrow="ALWAYS"/>
 			<Text styleClass="" text="%langue"/>
 		</HBox>
 		
