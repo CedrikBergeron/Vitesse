@@ -8,7 +8,7 @@ import commun.debogage.J;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-public class VueParametresFX<ConteneurCartes01, ConteneurEntetes>  implements VueParametres, Initializable {
+public class VuePrincipaleFX<ConteneurCartes01, ConteneurEntetes>  implements VuePrincipale, Initializable {
 	@FXML
 	private ConteneurEntetes conteneurEntetes;
 	
