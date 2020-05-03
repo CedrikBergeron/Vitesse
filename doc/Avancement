@@ -1,0 +1,6 @@
+Travail en cours:
+J'essai d'afficher des images dans ma partie. Je veux afficher 5 cartes au hasard. Quand j'appui sur un des boutons(cartes 1 à 5), la carte doit s'effacer et se remplacer par une autre carte
+encore disponible dans le paquet. 
+
+Travail futur:
+Vérifier si la carte sélectionnée est valide en se basant sur le nom du fichier de l'image. 
