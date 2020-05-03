@@ -30,6 +30,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	private JouerCoupPourEnvoi jouerCoup;
 
 	private RetourAccueilPourEnvoi retourAccueil;
+	
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -39,9 +40,6 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		DoitEtre.nonNul(texteNombreCoups);
 		DoitEtre.nonNul(boutonJouerCoup);
 		DoitEtre.nonNul(boutonRetour);
-		
-		// Nouvelle vue?
-		texteTmpPartieLocale.setText(texteTmpPartieLocale.getText() + " (" + System.identityHashCode(this) + ")");
 	} 
 
 	@Override

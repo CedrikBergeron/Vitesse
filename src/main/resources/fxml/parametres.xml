@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.Button?>
-<?import tp01_pages_javafx.vues.composants.MonRadio?>
+<?import Vitesse_javafx.vues.composants.MonRadio?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" 
     alignment="center"
@@ -15,7 +15,9 @@
 
 	<VBox VBox.vgrow="ALWAYS"/>
 		
-	<Text fx:id="texteTmpParametres" text="%afaire"/>
+	<Text fx:id="texteTmpParametres" text="%parametres"/>
+	
+	<Text fx:id="texteTmpParametres" text="%nbPaq"/>
 
 	<VBox VBox.vgrow="ALWAYS"/>
 
@@ -32,6 +34,10 @@
 		<HBox HBox.hgrow="ALWAYS" styleClass="conteneurTexte" >
 			<Text text="%TROIS"/>
 			<MonRadio fx:id="radioTrois" HBox.hgrow="ALWAYS"/>
+		</HBox>
+		<HBox HBox.hgrow="ALWAYS" styleClass="conteneurTexte" >
+			<Text text="%QUATRE"/>
+			<MonRadio fx:id="radioQuatre" HBox.hgrow="ALWAYS"/>
 		</HBox>
 		<HBox HBox.hgrow="ALWAYS"/>
 	</HBox>

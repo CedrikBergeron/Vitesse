@@ -12,7 +12,7 @@
       fx:controller="Vitesse_javafx.vues.VuePartieLocaleFX"
       VBox.vgrow="ALWAYS">
 
-    <Text fx:id="texteTmpPartieLocale" text="%afaire"/>
+    <Text fx:id="texteTmpPartieLocale" text="%jeu"/>
     <Pane VBox.vgrow="ALWAYS"/>
     <Button fx:id="boutonJouerCoup" text="%boutonJouerCoup"/>
     <Pane VBox.vgrow="ALWAYS"/>

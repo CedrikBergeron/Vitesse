@@ -31,7 +31,7 @@ public class VueParametresFX implements VueParametres, Initializable {
 	private Text texteTmpParametres;
 	
 	@FXML
-	private MonRadio radioUn, radioDeux, radioTrois;
+	private MonRadio radioUn, radioDeux, radioTrois, radioQuatre;
 	
 	@FXML
 	private Button boutonChangerLangue, boutonRetour;
@@ -50,11 +50,10 @@ public class VueParametresFX implements VueParametres, Initializable {
 		DoitEtre.nonNul(radioUn);
 		DoitEtre.nonNul(radioDeux);
 		DoitEtre.nonNul(radioTrois);
+		DoitEtre.nonNul(radioQuatre);
 		DoitEtre.nonNul(boutonChangerLangue);
 		DoitEtre.nonNul(boutonRetour);
 
-		// Nouvelle vue?
-		texteTmpParametres.setText(texteTmpParametres.getText() + " (" + System.identityHashCode(this) + ")");
 	}
 
 	@Override
@@ -98,6 +97,16 @@ public class VueParametresFX implements VueParametres, Initializable {
 				J.appel(this);
 
 				choisirChoix.setChoix(Choix.TROIS);
+				choisirChoix.envoyerCommande();
+			}
+		});
+		
+		radioQuatre.setOnMouseClicked(new EventHandler<Event>() {
+			@Override
+			public void handle(Event event) {
+				J.appel(this);
+
+				choisirChoix.setChoix(Choix.QUATRE);
 				choisirChoix.envoyerCommande();
 			}
 		});
@@ -150,18 +159,28 @@ public class VueParametresFX implements VueParametres, Initializable {
 			radioUn.selectionner(true);
 			radioDeux.selectionner(false);
 			radioTrois.selectionner(false);
+			radioQuatre.selectionner(false);
 			break;
 
 		case DEUX:
 			radioUn.selectionner(false);
 			radioDeux.selectionner(true);
 			radioTrois.selectionner(false);
+			radioQuatre.selectionner(false);
 			break;
 
 		case TROIS:
 			radioUn.selectionner(false);
 			radioDeux.selectionner(false);
 			radioTrois.selectionner(true);
+			radioQuatre.selectionner(false);
+			break;
+		
+		case QUATRE:
+			radioUn.selectionner(false);
+			radioDeux.selectionner(false);
+			radioTrois.selectionner(false);
+			radioQuatre.selectionner(true);
 			break;
 		}
 		

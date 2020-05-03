@@ -15,6 +15,8 @@ public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements Pa
 		
 		lesCoups.add(infoCoup);
 	}
+	
+	
 
 	@Override
 	public int getNombreCoups() {
