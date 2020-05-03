@@ -25,7 +25,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	private Text texteTmpPartieLocale, texteNombreCoups;
 	
 	@FXML
-	private Button boutonJouerCoup, boutonRetour;
+	private Button jouerCarte1, jouerCarte2, jouerCarte3, jouerCarte4, jouerCarte5, boutonRetour;
 	
 	private JouerCoupPourEnvoi jouerCoup;
 
@@ -38,7 +38,11 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		
 		DoitEtre.nonNul(texteTmpPartieLocale);
 		DoitEtre.nonNul(texteNombreCoups);
-		DoitEtre.nonNul(boutonJouerCoup);
+		DoitEtre.nonNul(jouerCarte1);
+		DoitEtre.nonNul(jouerCarte2);
+		DoitEtre.nonNul(jouerCarte3);
+		DoitEtre.nonNul(jouerCarte4);
+		DoitEtre.nonNul(jouerCarte5);
 		DoitEtre.nonNul(boutonRetour);
 	} 
 
@@ -55,7 +59,51 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	public void installerCapteursEvenementsUsager() {
 		J.appel(this);
 		
-		boutonJouerCoup.setOnAction(new EventHandler<ActionEvent>() {
+		jouerCarte1.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				jouerCoup.setInfoCoup(extraireInfoCoup());
+				
+				jouerCoup.envoyerCommande();
+			}
+		});
+		
+		jouerCarte2.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				jouerCoup.setInfoCoup(extraireInfoCoup());
+				
+				jouerCoup.envoyerCommande();
+			}
+		});
+		
+		jouerCarte3.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				jouerCoup.setInfoCoup(extraireInfoCoup());
+				
+				jouerCoup.envoyerCommande();
+			}
+		});
+		
+		jouerCarte4.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				jouerCoup.setInfoCoup(extraireInfoCoup());
+				
+				jouerCoup.envoyerCommande();
+			}
+		});
+		
+		jouerCarte5.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				J.appel(this);

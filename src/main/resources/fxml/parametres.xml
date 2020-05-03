@@ -15,7 +15,7 @@
 
 	<VBox VBox.vgrow="ALWAYS"/>
 		
-	<Text fx:id="texteTmpParametres" text="%parametres"/>
+	<Text fx:id="texteTmpParametres" text="%Paramètres"/>
 	
 	<Text fx:id="texteTmpParametres" text="%nbPaq"/>
 
@@ -45,9 +45,9 @@
 	<VBox VBox.vgrow="ALWAYS"/>
 
     <HBox VBox.vgrow="ALWAYS" alignment="center">
-        <Button fx:id="boutonChangerLangue" text="%changerLangue"/>
+        <Button fx:id="boutonChangerLangue" text="%Langue"/>
         <Pane styleClass="petitEspace" HBox.hgrow="ALWAYS"/>
-        <Button fx:id="boutonRetour" text="%boutonOk"/>
+        <Button fx:id="boutonRetour" text="%Retour"/>
     </HBox>
 
 	<VBox VBox.vgrow="ALWAYS"/>

@@ -16,13 +16,13 @@ public abstract class AfficheurPartieLocale<V extends VuePartieLocale>
     public void initialiserAffichage(PartieLocaleLectureSeule partieLectureSeule, VuePartieLocale vue) {
         J.appel(this);
         
-        vue.afficherNombreCoups(partieLectureSeule.getNombreCoups());
+        vue.afficherNombreCoups(partieLectureSeule.getCartesRestantes());
     }
 
     @Override
     public void rafraichirAffichage(PartieLocaleLectureSeule partieLectureSeule, VuePartieLocale vue) {
         J.appel(this);
 
-        vue.afficherNombreCoups(partieLectureSeule.getNombreCoups());
+        vue.afficherNombreCoups(partieLectureSeule.getCartesRestantes());
     }
 }

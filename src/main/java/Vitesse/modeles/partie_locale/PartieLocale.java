@@ -3,25 +3,28 @@ package Vitesse.modeles.partie_locale;
 import java.util.ArrayList;
 import java.util.List;
 
+import Vitesse.enumerations.Choix;
+import Vitesse.modeles.parametres.Parametres;
+import Vitesse.modeles.parametres.ParametresLectureSeule;
 import commun.debogage.J;
 import commun.modeles.Modele;
 
 public class PartieLocale extends Modele<PartieLocaleLectureSeule> implements PartieLocaleLectureSeule {
 	
-	private List<Integer> lesCoups = new ArrayList<>();
+	
+	
+	private int cartes = 52;
 	
 	public void jouerCoup(int infoCoup) {
 		J.appel(this);
 		
-		lesCoups.add(infoCoup);
+		cartes--;
 	}
-	
-	
 
 	@Override
-	public int getNombreCoups() {
-		J.appel(this);
+	public int getCartesRestantes() {
 		
-		return lesCoups.size();
+		return cartes;
 	}
+	
 }

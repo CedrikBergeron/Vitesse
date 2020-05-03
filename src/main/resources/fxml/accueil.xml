@@ -13,6 +13,6 @@
     <Pane styleClass="grosEspace" VBox.vgrow="ALWAYS"/>
     <Button fx:id="boutonNouvellePartie" text="%nouvellePartie"/>
     <Pane styleClass="grosEspace" VBox.vgrow="ALWAYS"/>
-    <Button fx:id="boutonOuvrirParametres" text="%parametres"/>
+    <Button fx:id="boutonOuvrirParametres" text="%Paramètres"/>
     <Pane styleClass="grosEspace" VBox.vgrow="ALWAYS"/>
 </VBox>
