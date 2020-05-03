@@ -17,16 +17,16 @@
 .fenetrePrincipale {
   -fx-border-style: solid;
   -fx-border-width: 2px;
-  -fx-border-color: #305ae1;
-  -fx-background-color: #95c5db;
+  -fx-border-color: #717a73;
+  -fx-background-color: #9dccaa;
 }
 MenuBar,
 ToolBar {
-  -fx-background-color: #bcced6;
+  -fx-background-color: #9dccaa;
 }
 Menu {
-  -fx-background-color: #bcced6;
+  -fx-background-color: #9dccaa;
 }
 MenuItem {
-  -fx-background-color: #bcced6;
+  -fx-background-color: #9dccaa;
 }

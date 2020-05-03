@@ -22,13 +22,7 @@
     	<Button fx:id="jouerCarte4" text="%carte4"/>
     	<Button fx:id="jouerCarte5" text="%carte5"/>
     </HBox>
-    
-    <HBox styleClass="ConteneurLigne" VBox.vgrow="ALWAYS">
-    	<caseAjustable url="/images/001.jpg" HBox.hgrow="ALWAYS"/>
-    	<caseAjustable url="/images/002.jpg" HBox.hgrow="ALWAYS"/>
-    	<caseAjustable url="/images/003.jpg" HBox.hgrow="ALWAYS"/>
-    </HBox>
-    
+
     
     <Pane VBox.vgrow="ALWAYS"/>
     <HBox alignment="center">

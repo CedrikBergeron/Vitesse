@@ -4,6 +4,7 @@ package Vitesse_javafx.vues.composants;
 import commun.debogage.J;
 
 import commun_javafx.vues.composants.CanvasAjustable;
+import javafx.beans.NamedArg;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 
@@ -11,13 +12,18 @@ public abstract class CaseAjustable extends CanvasAjustable {
     
     private final double TAILLE_POURCENTAGE = 0.6;
     
-
     public CaseAjustable() {
         super();
         J.appel(this);
 
         initialiserPinceau();
         dessinerCase();
+    }
+    
+    
+    public CaseAjustable(@NamedArg("url") String url) {
+        super();
+        J.appel(this);
     }
 
 
