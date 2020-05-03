@@ -1,6 +1,6 @@
 Travail en cours:
 J'essai d'afficher des images dans ma partie. Je veux afficher 5 cartes au hasard. Quand j'appui sur un des boutons(cartes 1 à 5), la carte doit s'effacer et se remplacer par une autre carte
-encore disponible dans le paquet. 
+encore disponible dans le paquet. Dans les paramètres, ont peut sélectionner les nombres de paquet de carte. Je veux que ce paramètres soit le multiplicateur du nombre de carte(52) qui est afficher dans la partie.
 
 Travail futur:
 Vérifier si la carte sélectionnée est valide en se basant sur le nom du fichier de l'image. 
