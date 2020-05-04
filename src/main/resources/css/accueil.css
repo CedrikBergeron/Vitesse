@@ -1,0 +1,110 @@
+.textTitre {
+	-fx-min-height: 50px;
+	-fx-font-size: 18px;
+	-fx-font-weight: bold;
+	-fx-font-style: italic;
+	-fx-alignment:center;
+}
+
+
+.langue {
+	
+
+	-fx-min-width: 150px;
+	-fx-alignment:center;
+	-fx-max-height: 50px;
+
+
+}
+.checkBoxLangue {
+	-fx-min-width: 200px;
+	-fx-max-width: 800px;
+	-fx-min-height: 100px;
+	-fx-max-height: 150px;
+	-fx-alignment:center;
+	-fx-text-fill: #00d0be;
+}
+.boutonConfirmer{
+	-fx-background-color: gray;	
+	-fx-min-width: 200px;
+	-fx-min-height: 45px;
+	-fx-max-width: 200px;
+	-fx-max-height: 45px;
+	-fx-border-width: 1px;
+	-fx-background-radius: 5px 5px 5px 5px;
+	-fx-border-radius: 5px 5px 5px 5px;
+	-fx-font-weight: bold;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	
+}
+.boutonAnnuler{
+	-fx-background-color: gray;	
+	-fx-min-width: 200px;
+	-fx-min-height: 45px;
+	-fx-max-width: 200px;
+	-fx-max-height: 45px;
+	-fx-border-width: 1px;
+	-fx-background-radius: 5px 5px 5px 5px;
+	-fx-border-radius: 5px 5px 5px 5px;
+	-fx-font-weight: bold;
+	-fx-border-color: black;
+	-fx-text-fill: black;
+	
+}
+
+.conteneurBouton {
+	
+	-fx-min-width: 800px;
+	-fx-min-height: 300px;
+	-fx-max-height: 300px;
+	-fx-alignment:center;
+
+}
+
+.checkBoxDifficulte {
+	-fx-min-width: 200px;
+	-fx-max-width: 800px;
+	-fx-min-height: 100px;
+	-fx-max-height: 150px;
+	-fx-alignment:center;
+	-fx-text-fill: #00d0be;
+}
+
+
+.mainParam {
+	
+	-fx-min-width: 200px;
+	-fx-min-height: 100px;
+	-fx-alignment:center;
+	-fx-background-color: gray;
+	-fx-border-style: solid;
+	-fx-border-color: black;
+	-fx-border-width: 2px;
+	-fx-background-radius: 5px 5px 5px 5px;
+	-fx-border-radius: 5px 5px 5px 5px;
+	-fx-text-fill: #00d0be;
+
+
+	
+}
+
+.boutonAnnuler:hover {
+	-fx-background-color: #AFAFAF
+}
+
+.boutonAnnuler: pressed {
+	-fx-background-color: #B18C84;
+}
+
+.boutonConfirmer:hover {
+	-fx-background-color: #AFAFAF
+}
+
+.boutonConfirmer: pressed {
+	-fx-background-color: #B18C84;
+}
+
+.checkBoxParametres {
+	-fx-font-size: 14px;
+}

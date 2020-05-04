@@ -1,4 +1,4 @@
-package vitesse;
+package vitesse_javafx;
 
 public class Constantes {
 	public static final String CHEMIN_CHAINES = "translate.chaines";

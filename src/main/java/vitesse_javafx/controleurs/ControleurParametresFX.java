@@ -1,17 +1,12 @@
-package vitesse_controleurs;
+package vitesse_javafx.controleurs;
 
 import commun.debogage.J;
-import vitesse.afficheurs.AfficheurParametresFX;
 import vitesse_client.controleurs.ControleurParametres;
-import vitesse_client.vues.VueParametresFX;
+import vitesse_javafx.afficheurs.AfficheurParametresFX;
+import vitesse_javafx.vues.VueParametresFX;
 
 public class ControleurParametresFX extends ControleurParametres<VueParametresFX, AfficheurParametresFX>{
 
-	@Override
-	protected void installerReceptionCommandes() {
-		
-		
-	}
 
 	
 

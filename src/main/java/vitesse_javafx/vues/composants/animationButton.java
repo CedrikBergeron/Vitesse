@@ -1,4 +1,4 @@
-package vitesse.vues.composants;
+package vitesse_javafx.vues.composants;
 
 import commun.debogage.J;
 import javafx.animation.KeyFrame;

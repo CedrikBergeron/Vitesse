@@ -14,4 +14,10 @@ public class Parametres extends Modele<ParametresLectureSeule> implements Parame
 		
 		return nbCartesJeu;
 	}
+
+	public void changerNombreDeCartes(int nombreDeCartes) {
+		J.appel(this);
+		
+		this.nbCartesJeu = nombreDeCartes;
+	}
 }

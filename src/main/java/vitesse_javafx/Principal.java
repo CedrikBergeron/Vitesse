@@ -1,18 +1,22 @@
-package vitesse;
+package vitesse_javafx;
 
 import commun.debogage.DoitEtre;
 import commun.debogage.J;
 import commun_client.mvc.controleurs.FabriqueControleur;
 import commun_javafx.ChargeurDeVue;
+import commun_javafx.DialogueModal;
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import vitesse.afficheurs.AfficheurParametresFX;
 import vitesse.modeles.parametres.Parametres;
+import vitesse_client.controleurs.ControleurAccueil;
 import vitesse_client.vues.VueParametres;
-import vitesse_client.vues.VueParametresFX;
-import vitesse_controleurs.ControleurParametresFX;
+import vitesse_javafx.afficheurs.AfficheurParametresFX;
+import vitesse_javafx.controleurs.ControleurAccueilFX;
+import vitesse_javafx.controleurs.ControleurParametresFX;
+import vitesse_javafx.vues.VueAccueilFX;
+import vitesse_javafx.vues.VueParametresFX;
 
 
 public class Principal extends Application {
@@ -35,6 +39,8 @@ public class Principal extends Application {
 	public void start(Stage fenetrePrincipale) throws Exception {
 		J.appel(this);
 		
+		DialogueModal.enregistreFenetrePrincipale(fenetrePrincipale);
+		
 		Scene scene = creerScenePrincipale();
 		
 		fenetrePrincipale.setScene(scene);
@@ -46,20 +52,14 @@ public class Principal extends Application {
 	private Scene creerScenePrincipale() {
 		J.appel(this);
 		
-		//Vérifier si encore utile x3
-		ChargeurDeVue<VueParametresFX> chargeur;
+		ChargeurDeVue<VueAccueilFX> chargeur;
+		chargeur = new ChargeurDeVue<VueAccueilFX>("/fxml/accueil.xml", "translate.chaines", "/css/accueil.css");
 		
-		chargeur = new ChargeurDeVue(Constantes.CHEMIN_PARTIE_LOCALE_FXML,Constantes.CHEMIN_CHAINES,Constantes.CHEMIN_PARTIE_LOCALE_CSS);
-		
-		VueParametresFX vue = chargeur.getVue();
+		VueAccueilFX vue = chargeur.getVue();
 		
 		DoitEtre.nonNul(vue);
 		
-		Parametres param = new Parametres();
-		
-		AfficheurParametresFX afficheur = new AfficheurParametresFX();
-		
-		FabriqueControleur.creerControleur(ControleurParametresFX.class, param, vue, afficheur);
+		FabriqueControleur.creerControleur(ControleurAccueilFX.class, vue);
 		
 		Scene scene = chargeur.nouvelleScene(600, 400);
 		
