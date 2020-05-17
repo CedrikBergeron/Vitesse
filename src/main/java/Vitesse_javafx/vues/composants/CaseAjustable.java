@@ -25,8 +25,7 @@ public abstract class CaseAjustable extends CanvasAjustable {
         super();
         J.appel(this);
     }
-
-
+    
     @Override
     protected void reagirLargeurInitiale(double largeurInitiale) {
         J.appel(this);
@@ -136,8 +135,6 @@ public abstract class CaseAjustable extends CanvasAjustable {
         laCase.caseHautGaucheY = (hauteurDessin - laCase.tailleCase) / 2;
         
         return laCase;
-    }
-
-
-    
+    }  
 }
+

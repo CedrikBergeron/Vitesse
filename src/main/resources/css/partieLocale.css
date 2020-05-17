@@ -14,3 +14,11 @@
   -fx-pref-height: 4em;
   -fx-max-height: 8em;
 }
+.tableJeu {
+  -fx-background-color: white;
+}
+.carte {
+	-fx-width: 120px;
+	-fx-height: 185px;
+	-fx-background-color: grey;
+}

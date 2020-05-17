@@ -8,10 +8,13 @@ import commun_javafx.DialogueModal;
 
 import static Vitesse_javafx.Constantes.*;
 
+import java.io.FileInputStream;
 
 import commun_javafx.Initialisateur;
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import Vitesse_javafx.controleurs.ControleurAccueilFX;
 import Vitesse_javafx.controleurs.ControleurPagesFX;

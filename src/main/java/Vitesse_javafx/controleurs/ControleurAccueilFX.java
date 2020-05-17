@@ -42,9 +42,6 @@ public class ControleurAccueilFX extends ControleurAccueil<VueAccueilFX> {
 		J.appel(this);
 		
 	}
-
-	
-	
 	
 	private void ouvrirParametres() {
 		J.appel(this);

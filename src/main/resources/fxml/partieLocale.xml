@@ -6,6 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.Color?>
+<?import Vitesse_javafx.vues.composants.MainJoueur?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" 
       styleClass="conteneurPrincipal" 
@@ -17,15 +20,38 @@
     <Text fx:id="texteTmpPartieLocale" text="%carteJouer"/>
     <HBox alignment="center">
     	<Button fx:id="jouerCarte1" text="%carte1"/>
+    	<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
     	<Button fx:id="jouerCarte2" text="%carte2"/>
+    	<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
     	<Button fx:id="jouerCarte3" text="%carte3"/>
+    	<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
     	<Button fx:id="jouerCarte4" text="%carte4"/>
+    	<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
     	<Button fx:id="jouerCarte5" text="%carte5"/>
     </HBox>
-
     
-    <Pane VBox.vgrow="ALWAYS"/>
+    <Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+    
     <HBox alignment="center">
+    	<Rectangle fx:id="carte06" fill="WHITE" stroke="RED" width="120" height="185"/>
+    </HBox>
+    
+	<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+	
+	<HBox alignment="center">
+		<Rectangle fx:id="carte01" fill="WHITE" stroke="RED" width="120" height="185"/>
+		<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+		<Rectangle fx:id="carte02" fill="WHITE" stroke="RED" width="120" height="185"/>
+		<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+		<Rectangle fx:id="carte03" fill="WHITE" stroke="RED" width="120" height="185"/>
+		<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+		<Rectangle fx:id="carte04" fill="WHITE" stroke="RED" width="120" height="185"/>
+		<Pane styleClass="petitEspace" VBox.vgrow="SOMETIMES"/>
+		<Rectangle fx:id="carte05" fill="WHITE" stroke="RED" width="120" height="185"/>
+	</HBox>
+	
+	
+	<HBox alignment="center">
     	<Text text="%nbCartesRes"/>
     	<Text fx:id="texteNombreCoups"/>
 	</HBox>
