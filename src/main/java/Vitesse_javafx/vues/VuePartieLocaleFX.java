@@ -30,7 +30,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 	
 	
 	@FXML
-	private Button boutonRetour;
+	private Button boutonRetour, boutonBruler;
 	
 	private JouerCoupPourEnvoi jouerCoup;
 
@@ -66,6 +66,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		DoitEtre.nonNul(texteTmpPartieLocale);
 		DoitEtre.nonNul(texteNombreCoups);
 		DoitEtre.nonNul(boutonRetour);
+		DoitEtre.nonNul(boutonBruler);
 		
 		carte01.setFill(new ImagePattern(imgcarte01));
 		carte02.setFill(new ImagePattern(imgcarte02));
@@ -227,6 +228,21 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 				retourAccueil.envoyerCommande();
 			}
 		});
+		
+		boutonBruler.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				J.appel(this);
+				
+				numc5 = randomCard();
+				
+				imgcarte05 = new Image(intToStringImg(numc5));
+			
+				carte05.setFill(new ImagePattern(imgcarte05));
+				
+				jouerCoup.envoyerCommande();
+			}
+		});
 	}
 
 	private int extraireInfoCoup() {
@@ -268,7 +284,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 		boolean proximite = false;
 		
 		if(0 <= carte && carte <= 12) {
-			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte + 25 == carteCentrale || carte + 38 == carteCentrale || nombreCartes == 0) {
+			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte + 25 == carteCentrale || carte + 38 == carteCentrale || carteCentrale == 99) {
 				System.out.println("carte trefle vers bas");
 				proximite = true;
 			} else if (carte + 1 == carteCentrale || carte + 14 == carteCentrale || carte + 27 == carteCentrale || carte + 40 == carteCentrale) {
@@ -276,7 +292,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 				System.out.println("carte trefle vers haut");
 			}
 		} else if(13 <= carte && carte <= 25) {
-			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte + 25 == carteCentrale || carte - 14 == carteCentrale || nombreCartes == 0) {
+			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte + 25 == carteCentrale || carte - 14 == carteCentrale || carteCentrale == 99) {
 				System.out.println("carte carreau vers bas");
 				proximite = true;
 			} else if (carte + 1 == carteCentrale || carte + 14 == carteCentrale || carte -12 == carteCentrale || carte -25 == carteCentrale) {
@@ -284,7 +300,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 				proximite = true;
 			}
 		} else if(26 <= carte && carte <= 38) {
-			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte -27 == carteCentrale || carte -14 == carteCentrale || nombreCartes == 0) {
+			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte -27 == carteCentrale || carte -14 == carteCentrale || carteCentrale == 99) {
 				System.out.println("carte coeur vers bas");
 				proximite = true;
 			} else if (carte + 1 == carteCentrale || carte - 37 == carteCentrale || carte -12 == carteCentrale || carte -25 == carteCentrale) {
@@ -292,7 +308,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 				proximite = true;
 			}
 		} else {
-			if(carte - 1 == carteCentrale || carte -40 == carteCentrale || carte -27 == carteCentrale || carte -14 == carteCentrale || nombreCartes == 0) {
+			if(carte - 1 == carteCentrale || carte -40 == carteCentrale || carte -27 == carteCentrale || carte -14 == carteCentrale || carteCentrale == 99) {
 				System.out.println("carte pique vers bas");
 				proximite = true;
 			} else if (carte + 1 == carteCentrale || carte -12 == carteCentrale || carte - 25 == carteCentrale || carte -38 == carteCentrale) {

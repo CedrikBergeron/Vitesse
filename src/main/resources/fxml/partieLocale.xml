@@ -48,5 +48,6 @@
     <Pane VBox.vgrow="ALWAYS"/>
 
     <Button fx:id="boutonRetour" text="%Retour"/>
+    <Button fx:id="boutonBruler" text="%Bruler"/>
 
 </VBox>
