@@ -104,15 +104,22 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 					
 					carteCentrale = numc1;
 					
-					numc1 = randomCard();
+					if(nombreCartes < 52) {
+						numc1 = randomCard();
+						
+						imgcarte01 = new Image(intToStringImg(numc1));
 					
-					nombreCartes++;
-				
-					imgcarte01 = new Image(intToStringImg(numc1));
-				
-					carte01.setFill(new ImagePattern(imgcarte01));
+						carte01.setFill(new ImagePattern(imgcarte01));
+						
+						jouerCoup.envoyerCommande();
+					} else {
+						imgcarte01 = new Image("images/Gray_back.jpg");
+						
+						carte01.setFill(new ImagePattern(imgcarte01));
+						
+						jouerCoup.envoyerCommande();
+					}
 					
-					jouerCoup.envoyerCommande();
 					
 					System.out.println(carteCentrale);
 					System.out.println(numc1);
@@ -134,13 +141,21 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 					
 					carteCentrale = numc2;
 
-					numc2 = randomCard();
-				
-					imgcarte02 = new Image(intToStringImg(numc2));
-				
-					carte02.setFill(new ImagePattern(imgcarte02));
+					if(nombreCartes < 52) {
+						numc2 = randomCard();
+						
+						imgcarte02 = new Image(intToStringImg(numc2));
 					
-					jouerCoup.envoyerCommande();
+						carte02.setFill(new ImagePattern(imgcarte02));
+						
+						jouerCoup.envoyerCommande();
+					} else {
+						imgcarte02 = new Image("images/Gray_back.jpg");
+						
+						carte02.setFill(new ImagePattern(imgcarte02));
+						
+						jouerCoup.envoyerCommande();
+					}
 				}
 			}
 		});
@@ -159,13 +174,21 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 					
 					carteCentrale = numc3;
 
-					numc3 = randomCard();
-				
-					imgcarte03 = new Image(intToStringImg(numc3));
-				
-					carte03.setFill(new ImagePattern(imgcarte03));
+					if(nombreCartes < 53) {
+						numc3 = randomCard();
+						
+						imgcarte03 = new Image(intToStringImg(numc3));
 					
-					jouerCoup.envoyerCommande();
+						carte03.setFill(new ImagePattern(imgcarte03));
+						
+						jouerCoup.envoyerCommande();
+					} else {
+						imgcarte03 = new Image("images/Gray_back.jpg");
+						
+						carte03.setFill(new ImagePattern(imgcarte03));
+						
+						jouerCoup.envoyerCommande();
+					}
 				}
 			}
 		});
@@ -184,13 +207,21 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 					
 					carteCentrale = numc4;
 					
-					numc4 = randomCard();
-				
-					imgcarte04 = new Image(intToStringImg(numc4));
-				
-					carte04.setFill(new ImagePattern(imgcarte04));
+					if(nombreCartes < 54) {
+						numc4 = randomCard();
+						
+						imgcarte04 = new Image(intToStringImg(numc4));
 					
-					jouerCoup.envoyerCommande();
+						carte04.setFill(new ImagePattern(imgcarte04));
+						
+						jouerCoup.envoyerCommande();
+					} else {
+						imgcarte04 = new Image("images/Gray_back.jpg");
+						
+						carte04.setFill(new ImagePattern(imgcarte04));
+						
+						jouerCoup.envoyerCommande();
+					}
 				}
 			}
 		});
@@ -209,13 +240,21 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 					
 					carteCentrale = numc5;
 					
-					numc5 = randomCard();
-				
-					imgcarte05 = new Image(intToStringImg(numc5));
-				
-					carte05.setFill(new ImagePattern(imgcarte05));
+					if(nombreCartes < 55) {
+						numc5 = randomCard();
+						
+						imgcarte05 = new Image(intToStringImg(numc5));
 					
-					jouerCoup.envoyerCommande();
+						carte05.setFill(new ImagePattern(imgcarte05));
+						
+						jouerCoup.envoyerCommande();
+					} else {
+						imgcarte05 = new Image("images/Gray_back.jpg");
+						
+						carte05.setFill(new ImagePattern(imgcarte05));
+						
+						jouerCoup.envoyerCommande();
+					}
 				}
 			}
 		});
@@ -295,7 +334,7 @@ public class VuePartieLocaleFX implements VuePartieLocale, Initializable {
 			if(carte - 1 == carteCentrale || carte + 12 == carteCentrale || carte + 25 == carteCentrale || carte - 14 == carteCentrale || carteCentrale == 99) {
 				System.out.println("carte carreau vers bas");
 				proximite = true;
-			} else if (carte + 1 == carteCentrale || carte + 14 == carteCentrale || carte -12 == carteCentrale || carte -25 == carteCentrale) {
+			} else if (carte + 1 == carteCentrale || carte + 14 == carteCentrale || carte -12 == carteCentrale || carte + 27 == carteCentrale) {
 				System.out.println("carte carreau vers haut");
 				proximite = true;
 			}
