@@ -21,8 +21,6 @@ Correction:
     	* l'action modifie le modèle
     	* l'affichage est rafraîchit
 
- 40/40) MVC *Partie locale* 
-	* vous **devez** utiliser les classes MVC du prof
-    * au moins une action usager:
-    	* l'action modifie le modèle
-    	* l'affichage est rafraîchit
+ 30/40) MVC *Partie locale* 
+ 	* ce que tu as fait est très bien, mais 
+ 	  tu l'as fait en dehors de la méthodologie MVC du cours
